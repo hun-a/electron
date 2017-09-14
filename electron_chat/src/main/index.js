@@ -1,7 +1,9 @@
 import { app } from 'electron';
 import createWindow from './createwindow';
+import setAppMenu from './setAppMenu';
 
 app.on('ready', () => {
+  setAppMenu();
   createWindow();
 });
 

@@ -6,9 +6,14 @@ var _createwindow = require('./createwindow');
 
 var _createwindow2 = _interopRequireDefault(_createwindow);
 
+var _setAppMenu = require('./setAppMenu');
+
+var _setAppMenu2 = _interopRequireDefault(_setAppMenu);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 _electron.app.on('ready', function () {
+  (0, _setAppMenu2.default)();
   (0, _createwindow2.default)();
 });
 
