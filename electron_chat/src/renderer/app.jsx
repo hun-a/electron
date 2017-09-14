@@ -5,6 +5,7 @@ import Login from './Login';
 import Signup from './Signup';
 import Rooms from './Rooms';
 import Room from './Room';
+import firebase from 'firebase/firebase-browser';
 
 // Define the Routing
 const appRouting = (
@@ -23,6 +24,16 @@ const appRouting = (
 if (!location.hash.length) {
   location.hash = '#/login';
 }
+
+var config = {
+  apiKey: "AIzaSyDZ9QEQ58h_IEMlJFSuexi3PAxEVYcU7so",
+  authDomain: "electron-chat-fcc8d.firebaseapp.com",
+  databaseURL: "https://electron-chat-fcc8d.firebaseio.com",
+  projectId: "electron-chat-fcc8d",
+  storageBucket: "electron-chat-fcc8d.appspot.com",
+  messagingSenderId: "1097573266600"
+};
+firebase.initializeApp(config);
 
 // Rendering the Application
 render(appRouting, document.getElementById('app'));
