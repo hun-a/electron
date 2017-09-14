@@ -5,7 +5,7 @@
   "main": ".tmp/main/index.js",
   "scripts": {
     "start": "electron .",
-    "watch": "babel --watch --out-dir .tmp src"
+    "watch": "./node_modules/.bin/babel --watch --out-dir .tmp src"
   },
   "author": "huna",
   "license": "MIT",
