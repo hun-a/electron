@@ -40,7 +40,7 @@ export default class NewMessage extends React.Component {
           value={this.state.message}
         />
         <button
-          clasName='btn btn-large btn-primary'
+          className='btn btn-large btn-primary'
           style={BUTTON_STYLE}
         >
           POST
