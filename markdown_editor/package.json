@@ -4,13 +4,14 @@
   "description": "",
   "main": "dist/main/index.js",
   "scripts": {
-	"build": "./node_modules/.bin/webpack",
-	"watch": "./node_modules/.bin/webpack --watch",
-	"start": "electron ."
+    "build": "./node_modules/.bin/webpack",
+    "watch": "./node_modules/.bin/webpack --watch",
+    "start": "electron ."
   },
   "author": "huna",
   "license": "ISC",
   "dependencies": {
+    "marked": "^0.3.5",
     "photon": "github:connors/photon",
     "react": "^15.4.2",
     "react-dom": "^15.4.2"
