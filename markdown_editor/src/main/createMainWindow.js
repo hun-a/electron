@@ -17,6 +17,10 @@ class MainWindow {
       ipcMain.once('REPLAY_TEXT', (_e, text) => resolve(text));
     });
   }
+
+  sendText(text) {
+    this.window.webContents.send('SEND_TEXT', text);
+  }
 }
 
 function createMainWindow() {
