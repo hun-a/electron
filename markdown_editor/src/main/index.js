@@ -4,6 +4,7 @@ import setAppMenu from './setAppMenu';
 import showSaveAsNewFileDialog from './showSaveAsNewFileDialog';
 import createFileManager from './createFileManager';
 import showOpenFileDialog from './showOpenFileDialog';
+import createPDFWindow from './createPDFWindow';
 
 let mainWindow = null;
 let fileManager = null;
@@ -34,7 +35,9 @@ function saveAsNewFile() {
 }
 
 function exportPDF() {
-  console.log('exportPDF');
+  mainWindow.requestText()
+    .then(text => createPDFWindow(text))
+    .catch(err => console.log(err));
 }
 
 app.on('ready', () => {
