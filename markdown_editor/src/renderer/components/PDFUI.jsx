@@ -19,7 +19,7 @@ export default class PDFUI extends React.Component {
     const images = Array.prototype.slice.call(document.querySelectorAll('img'));
     const loadingImages = images.filter((image) => !image.complete);
     if (loadingImages.length === 0) {
-      return Promise.resove();
+      return Promise.resolve();
     }
     return Promise.all(loadingImages.map((image) =>
       new Promise(resolve =>
